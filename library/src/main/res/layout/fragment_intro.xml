@@ -10,7 +10,7 @@
         android:layout_height="0dp"
         android:layout_weight="3"
         android:id="@+id/title"
-        style="@style/introTitleTextStyle" />
+        style="@style/IntroTitleTextStyle" />
 
     <LinearLayout
         android:layout_width="fill_parent"

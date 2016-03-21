@@ -5,7 +5,7 @@
         <item name="android:textSize">14dp</item>
         <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
         <item name="android:minWidth">100dp</item>
-        <item name="android:textColor">#ffffff</item>
+        <item name="android:textColor">@color/app_intro_bottom_button_text</item>
     </style>
 
     <style name="NextButton" parent="BottomButtonStyle">
@@ -21,12 +21,12 @@
         <item name="android:layout_marginLeft">8dp</item>
     </style>
 
-    <style name="introTitleTextStyle">
+    <style name="IntroTitleTextStyle">
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
         <item name="android:paddingLeft">32dp</item>
         <item name="android:textStyle">bold</item>
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColor">@color/app_intro_fragment_title_text</item>
         <item name="android:paddingRight">32dp</item>
         <item name="android:textSize">28sp</item>
     </style>
@@ -34,7 +34,7 @@
     <style name="IntroDescriptionTextStyle">
         <item name="android:layout_gravity">center</item>
         <item name="android:gravity">center</item>
-        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColor">@color/app_intro_fragment_description_text</item>
         <item name="android:paddingLeft">64dp</item>
         <item name="android:paddingRight">64dp</item>
         <item name="android:textSize">16sp</item>
