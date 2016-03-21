@@ -37,40 +37,27 @@
 
             <Button
                 android:id="@+id/skip"
-                style="?attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_gravity="left"
-                android:layout_marginLeft="8dp"
-                android:background="?android:attr/selectableItemBackgroundBorderless"
-                android:minWidth="100dp"
                 android:text="@string/skip_button"
-                android:textColor="#ffffff" />
+                style="@style/SkipButton" />
 
             <ImageButton
                 android:id="@+id/next"
-                style="?attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_gravity="right"
-                android:layout_marginRight="8dp"
-                android:background="?android:attr/selectableItemBackgroundBorderless"
-                android:minWidth="100dp"
-                android:src="@drawable/ic_navigate_next_white_24dp" />
+                android:src="@drawable/ic_navigate_next_white_24dp"
+                style="@style/NextButton" />
 
             <Button
                 android:id="@+id/done"
-                style="?attr/borderlessButtonStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:layout_gravity="right"
-                android:layout_marginRight="8dp"
-                android:background="?android:attr/selectableItemBackgroundBorderless"
-                android:minWidth="100dp"
-                android:paddingRight="16dp"
                 android:text="@string/done_button"
-                android:textColor="#ffffff"
-                android:visibility="gone" />
+                style="@style/DoneButton" />
         </FrameLayout>
     </LinearLayout>
 </RelativeLayout>
