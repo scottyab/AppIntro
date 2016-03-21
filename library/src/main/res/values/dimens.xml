@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="app_intro_fragment_title_text_size">28sp</dimen>
+    <dimen name="app_intro_fragment_body_text_size">16sp</dimen>
+
+    <dimen name="app_intro_fragment_title_vertical_padding">16dp</dimen>
+    <dimen name="app_intro_fragment_title_horizontal_padding">32dp</dimen>
+    <dimen name="app_intro_fragment_body_horizontal_padding">64dp</dimen>
+
+</resources>
