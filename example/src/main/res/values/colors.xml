@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="intro_step1">#139dc9</color>
+    <color name="intro_step2">#ffc82f</color>
+    <color name="intro_step4">#e7582b</color>
+    <color name="intro_step3">#ccc011</color>
+</resources>

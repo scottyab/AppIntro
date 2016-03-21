@@ -32,4 +32,25 @@
     <string name="permission_intro">Intro with Permissions</string>
     <string name="permission_intro2">Intro with Permissions 2</string>
     <string name="title_activity_permissions_intro">Permissions Intro</string>
+
+
+    <string name="intro_slide_1_title">Get going on Android</string>
+    <string name="intro_slide_1_body">Four tips to make your switch to Android quick and easy.</string>
+
+    <string name="intro_slide_2_body">Turn the little green Android mascot into you, your friends, anyone!</string>
+    <string name="intro_slide_2_title">Create your own Android character</string>
+
+    <string name="intro_slide_3_title">Get a clean, customisable home screen</string>
+    <string name="intro_slide_3_body">A clean, simple, customisable home screen that comes with the power of Google Now: traffic alerts, weather and much more, just a swipe away.
+    \n *repeat* \n
+    A clean, simple, customisable home screen that comes with the power of Google Now: traffic alerts, weather and much more, just a swipe away.
+    </string>
+
+    <string name="intro_slide_4_title">Millions to choose from</string>
+    <string name="intro_slide_4_body">Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.
+        \n *repeat* \n
+        Hail a taxi, find a recipe, run through a temple – Google Play has all the apps and games that let you make your Android device uniquely yours.</string>
+    <string name="title_activity_long_text">Long text Sample</string>
+    <string name="long_text_intro">Start Into with Long text</string>
+
 </resources>

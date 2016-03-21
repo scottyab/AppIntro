@@ -48,6 +48,12 @@
         <activity android:name=".DisableSwipeIntro2"
             android:label="@string/title_activity_second_intro_disable"
             android:theme="@style/FullscreenTheme"/>
+
+        <activity android:name=".IntroWithLongText"
+                  android:theme="@style/FullscreenTheme"
+                  android:label="@string/title_activity_long_text"
+            />
+
         <activity android:name=".animations.CustomAnimation" />
         <activity android:name=".animations.FadeAnimation" />
         <activity android:name=".animations.ZoomAnimation" />

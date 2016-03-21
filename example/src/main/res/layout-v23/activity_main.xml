@@ -38,6 +38,13 @@
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="startIntroWithLongText"
+            android:text="@string/long_text_intro"/>
+
+        <Button
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:onClick="disableSwipeIntro1"
             android:text="@string/disable_swipe_intro_1" />
 

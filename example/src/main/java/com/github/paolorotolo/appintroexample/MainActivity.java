@@ -24,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    public void startIntroWithLongText(View v){
+        Intent intent = new Intent(this, IntroWithLongText.class);
+        startActivity(intent);
+    }
+
     public void startDefaultIntro(View v){
         Intent intent = new Intent(this, DefaultIntro.class);
         startActivity(intent);
