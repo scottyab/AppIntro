@@ -1,5 +1,6 @@
 package com.github.paolorotolo.appintro;
 
+import android.graphics.Typeface;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -47,12 +49,13 @@ public abstract class AppIntro extends AppCompatActivity {
     protected boolean progressButtonEnabled = true;
     protected int selectedIndicatorColor = DEFAULT_COLOR;
     protected int unselectedIndicatorColor = DEFAULT_COLOR;
-    protected View skipButton;
-    protected View nextButton;
-    protected View doneButton;
+    protected Button skipButton;
+    protected ImageButton nextButton;
+    protected Button doneButton;
     protected int savedCurrentItem;
     protected ArrayList<PermissionObject> permissionsArray = new ArrayList<>();
     private static final int PERMISSIONS_REQUEST_ALL_PERMISSIONS = 1;
+    private Typeface typeface;
 
     enum TransformType {
         FLOW,
@@ -70,9 +73,9 @@ public abstract class AppIntro extends AppCompatActivity {
 
         setContentView(R.layout.intro_layout);
 
-        skipButton = findViewById(R.id.skip);
-        nextButton = findViewById(R.id.next);
-        doneButton = findViewById(R.id.done);
+        skipButton = (Button) findViewById(R.id.skip);
+        nextButton = (ImageButton) findViewById(R.id.next);
+        doneButton = (Button) findViewById(R.id.done);
         mVibrator = (Vibrator) this.getSystemService(VIBRATOR_SERVICE);
         mPagerAdapter = new PagerAdapter(getSupportFragmentManager(), fragments);
         pager = (AppIntroViewPager) findViewById(R.id.view_pager);
@@ -174,6 +177,9 @@ public abstract class AppIntro extends AppCompatActivity {
 
         init(savedInstanceState);
         slidesNumber = fragments.size();
+
+        skipButton.setTypeface(typeface);
+        doneButton.setTypeface(typeface);
 
         if (slidesNumber == 1) {
             setProgressButtonEnabled(progressButtonEnabled);
@@ -314,12 +320,11 @@ public abstract class AppIntro extends AppCompatActivity {
         LinearLayout bottomBar = (LinearLayout) findViewById(R.id.bottom);
         bottomBar.setBackgroundColor(color);
     }
-    
+
     /**
      * Override next button arrow color
-     * 
-     * @param color your color 
-     * 
+     *
+     * @param color your color
      */
     public void setNextArrowColor(@ColorInt final int color) {
         ImageButton nextButton = (ImageButton) findViewById(R.id.next);
@@ -597,7 +602,7 @@ public abstract class AppIntro extends AppCompatActivity {
 
     public void onRequestPermissionsResult(int requestCode, @NonNull String permissions[],
                                            @NonNull int[] grantResults) {
-    	super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
             case PERMISSIONS_REQUEST_ALL_PERMISSIONS:
                 pager.setCurrentItem(pager.getCurrentItem() + 1);
@@ -606,5 +611,13 @@ public abstract class AppIntro extends AppCompatActivity {
                 Log.e(TAG, "Unexpected request code");
         }
 
+    }
+
+    public void setTypeFace(Typeface tf) {
+        typeface = tf;
+    }
+
+    public Typeface getTypeface() {
+        return typeface;
     }
 }

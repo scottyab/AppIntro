@@ -1,5 +1,6 @@
 package com.github.paolorotolo.appintro;
 
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -19,6 +20,14 @@ public class AppIntroFragment extends Fragment {
     private static final String ARG_BG_COLOR = "bg_color";
     private static final String ARG_TITLE_COLOR = "title_color";
     private static final String ARG_DESC_COLOR = "desc_color";
+    private TextView titleTV;
+    private TextView descriptionTV;
+    private ImageView imageView;
+    private LinearLayout container;
+    private Typeface typeface;
+
+    private int drawable, bgColor, titleColor, descColor;
+    private CharSequence title, description;
 
     public static AppIntroFragment newInstance(CharSequence title, CharSequence description, int imageDrawable, int bgColor) {
         return newInstance(title, description, imageDrawable, bgColor, 0, 0);
@@ -39,9 +48,6 @@ public class AppIntroFragment extends Fragment {
 
         return sampleSlide;
     }
-
-    private int drawable, bgColor, titleColor, descColor;
-    private CharSequence title, description;
 
     public AppIntroFragment() {
     }
@@ -64,26 +70,35 @@ public class AppIntroFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_intro, container, false);
-        TextView t = (TextView) v.findViewById(R.id.title);
-        TextView d = (TextView) v.findViewById(R.id.description);
-        ImageView i = (ImageView) v.findViewById(R.id.image);
-        LinearLayout m = (LinearLayout) v.findViewById(R.id.main);
+        titleTV = (TextView) v.findViewById(R.id.title);
+        descriptionTV = (TextView) v.findViewById(R.id.description);
+        imageView = (ImageView) v.findViewById(R.id.image);
+        this.container = (LinearLayout) v.findViewById(R.id.main);
 
 
-        t.setText(title);
+        titleTV.setText(title);
+        titleTV.setTypeface(typeface);
         if (titleColor != 0) {
-            t.setTextColor(titleColor);
+            titleTV.setTextColor(titleColor);
         }
 
-        d.setText(description);
+        descriptionTV.setText(description);
+        descriptionTV.setTypeface(typeface);
         if (descColor != 0) {
-            d.setTextColor(descColor);
+            descriptionTV.setTextColor(descColor);
         }
-        
-        i.setImageDrawable(ContextCompat.getDrawable(getActivity(), drawable));
-        m.setBackgroundColor(bgColor);
+
+        imageView.setImageDrawable(ContextCompat.getDrawable(getActivity(), drawable));
+        this.container.setBackgroundColor(bgColor);
 
         return v;
     }
 
+    public void setTypeFace(Typeface tf) {
+        typeface = tf;
+    }
+
+    public Typeface getTypeface() {
+        return typeface;
+    }
 }
